@@ -6,8 +6,10 @@ To boot this bot locally, we recommend the following:
 
 1. create a `.env` with yours credentials
 
+```
     ACCESS_TOKEN=
     VERIFY_TOKEN=
+```
 
 2. `bundle`
 3. Start your local Redis server
