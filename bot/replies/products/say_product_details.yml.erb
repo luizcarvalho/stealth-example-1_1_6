@@ -1,0 +1,13 @@
+- reply_type: text
+  text: |
+    Name: <%= @product.name %>
+    Description: <%= @product.description %>
+    Size: <%= @product.size %>
+    Color: <%= @product.color %>
+  buttons:
+    - type: "payload"
+      text: 'Buy'
+      payload: BUY_PRODUCT_<%= @product.number %>"
+    - type: "payload"
+      text: 'Back'
+      payload: LIST_PRODUCTS

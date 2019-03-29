@@ -3,12 +3,11 @@ class BotController < Stealth::Controller
   helper :all
 
   def route
+    puts @current_message.inspect
     if @current_message.message
-      if current_session.present?
-        step_to session: current_session
-      else
-        step_to flow: 'hello', state: 'say_hello'
-      end
+      step_to flow: 'product', state: 'say_products'
+    elsif @current_message.payload
+      step_to flow: 'product', state: 'say_product_details'
     end
   end
 
